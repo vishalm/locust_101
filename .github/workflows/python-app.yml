@@ -25,4 +25,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: ExecuteLoad test
       run: |
-        locust -f locustfile.py --headless=true --host=http://nodejs-ex-vishal-k-mishra-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com --run-time=5m --users=1000 --spawn-rate=10
+        locust -f locustfile.py --headless -u 1000 -r 10 --run-time 5m --host=http://nodejs-ex-vishal-k-mishra-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
